@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Random;
 import me.weicools.material.component.R;
 import me.weicools.material.component.config.RouterData;
-import me.weicools.material.component.utils.UiUtils;
 
 /**
  * @author Weicools Create on 2018.08.23
@@ -49,8 +48,9 @@ public class MainItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
   public void onBindViewHolder (@NonNull RecyclerView.ViewHolder viewHolder, int position) {
     RouterData data = mDataList.get(position);
     if (data.getType() == 0) {
-      ((TitleViewHolder) viewHolder).tvItemTitle.setText(data.getName());
-      ((TitleViewHolder) viewHolder).tvItemTitle.setBackgroundColor(getRandomColor());
+      TitleViewHolder holder = (TitleViewHolder) viewHolder;
+      holder.tvItemTitle.setText(data.getName());
+      holder.tvItemTitle.setBackgroundColor(getRandomColor());
     } else {
       ItemViewHolder holder = (ItemViewHolder) viewHolder;
       holder.tvItemTitle.setText(data.getName());
