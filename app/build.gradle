@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 android {
   compileSdkVersion 28
   defaultConfig {
-    applicationId "me.weicools.material.compent"
+    applicationId "me.weicools.material.component"
     minSdkVersion 22
     targetSdkVersion 28
     versionCode 1
