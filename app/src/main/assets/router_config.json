@@ -1,0 +1,29 @@
+{
+  "router_config": [
+    {
+      "type": 0,
+      "name": "Main",
+      "path": "/module/main"
+    },
+    {
+      "type": 1,
+      "name": "Main",
+      "path": "/module/main"
+    },
+    {
+      "type": 1,
+      "name": "Main",
+      "path": "/module/main"
+    },
+    {
+      "type": 1,
+      "name": "Main",
+      "path": "/module/main"
+    },
+    {
+      "type": 1,
+      "name": "Main",
+      "path": "/module/main"
+    }
+  ]
+}

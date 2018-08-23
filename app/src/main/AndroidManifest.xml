@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="me.weicools.material.compent">
+  
+  <application
+    android:name=".MaterialApp"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme">
+    <activity android:name=".module.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    
+    <activity android:name=".module.search.SearchHistoryCardActivity" />
+    <activity android:name=".module.bottomnavigation.BottomNavigationBasicActivity" />
+    <activity android:name=".module.bottomnavigation.BottomNavigationDarkActivity" />
+    <activity android:name=".module.bottomnavigation.BottomNavigationIconActivity" />
+    <activity android:name=".module.bottomnavigation.BottomNavigationLightActivity" />
+    <activity android:name=".module.bottomnavigation.BottomNavigationMapBlueActivity" />
+    <activity android:name=".module.bottomnavigation.BottomNavigationPrimaryActivity" />
+    <activity android:name=".module.bottomnavigation.BottomNavigationShiftingActivity" />
+    <activity android:name=".module.bottomsheet.BottomSheetBasicActivity" />
+    <activity android:name=".module.button.ButtonBasicActivity" />
+    <activity android:name=".module.card.CardBasicActivity" />
+    <activity android:name=".module.chip.ChipBasicActivity" />
+    <activity android:name=".module.chip.ChipTagActivity" />
+    <activity android:name=".module.dashboard.DashboardFlightActivity" />
+    <activity android:name=".module.dialog.DialogAddPostActivity" />
+    <activity android:name=".module.expansionpanel.ExpansionPanelBasicActivity" />
+    <activity android:name=".module.form.FormLoginActivity" />
+    <activity android:name=".module.gridlist.GridAlbumsActivity" />
+    <activity android:name=".module.list.ListAnimationActivity" />
+    <activity android:name=".module.login.LoginCardLightActivity" />
+  </application>
+</manifest>

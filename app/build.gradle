@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion 28
+  defaultConfig {
+    applicationId "me.weicools.material.compent"
+    minSdkVersion 22
+    targetSdkVersion 28
+    versionCode 1
+    versionName "1.0"
+
+    lintOptions {
+      abortOnError false
+    }
+
+    kapt {
+      correctErrorTypes = true
+    }
+
+    compileOptions {
+      sourceCompatibility JavaVersion.VERSION_1_8
+      targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    javaCompileOptions {
+      annotationProcessorOptions {
+        arguments = [AROUTER_MODULE_NAME: project.getName()]
+      }
+    }
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  // kotlin plugin
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+  // Support Library
+  implementation "com.android.support:design:$support_version"
+  implementation "com.android.support:support-v4:$support_version"
+  implementation "com.android.support:customtabs:$support_version"
+  implementation "com.android.support:cardview-v7:$support_version"
+  implementation "com.android.support:appcompat-v7:$support_version"
+  implementation "com.android.support.constraint:constraint-layout:$constrain_version"
+
+  // Rx series
+  implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+  implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+  implementation "zlc.season:rxdownload3:$rxdownload"
+
+  // Retrofit series
+  implementation "com.squareup.retrofit2:retrofit:$retrofit"
+  implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+  implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+
+  // json
+  implementation "com.google.code.gson:gson:$gson"
+
+  // Image load
+  implementation "com.github.chrisbanes:PhotoView:$photo"
+  implementation "com.github.bumptech.glide:glide:$glide"
+  implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+  kapt "com.github.bumptech.glide:compiler:$glide"
+
+  // ButterKnife
+  implementation "com.jakewharton:butterknife:$butterknife"
+  kapt "com.jakewharton:butterknife-compiler:$butterknife"
+
+  // Router
+  implementation "com.alibaba:arouter-api:$arouter_api"
+  kapt "com.alibaba:arouter-compiler:$arouter_compiler"
+
+  // ui library
+  implementation "com.nex3z:flow-layout:$flow_layout"
+  implementation "com.aurelhubert:ahbottomnavigation:$ahbottom"
+  implementation "com.github.daniel-stoneuk:material-about-library:$about"
+  //implementation "com.hootsuite.android:nachos:$nachos"
+  //implementation "com.wdullaer:materialdatetimepicker:$datetimepicker"
+  //implementation "com.mikhaellopez:circularimageview:$circularimageview"
+  //implementation "com.github.pchmn:MaterialChipsInput:$MaterialChipsInput"
+}
