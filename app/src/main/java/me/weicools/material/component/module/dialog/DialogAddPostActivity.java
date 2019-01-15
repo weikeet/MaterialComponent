@@ -1,6 +1,6 @@
 package me.weicools.material.component.module.dialog;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import me.weicools.material.component.R;

@@ -1,8 +1,7 @@
 package me.weicools.material.component.utils;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.support.v4.content.ContextCompat;
+import androidx.core.content.ContextCompat;
 import android.util.TypedValue;
 import java.util.Random;
 import me.weicools.material.component.R;

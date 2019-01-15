@@ -1,6 +1,6 @@
-package me.weicools.material.component.module.bottomsheet;
+package me.weicools.material.component.module.navigation.bottom;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import me.weicools.material.component.R;
@@ -11,12 +11,12 @@ import me.weicools.material.component.config.RouterPath;
  *
  * desc:
  */
-@Route(path = RouterPath.MODULE_BOTTOM_SHEET_BASIC)
-public class BottomSheetBasicActivity extends AppCompatActivity {
+@Route(path = RouterPath.MODULE_BOTTOM_NAVIGATION_MAP_BLUE)
+public class BottomNavigationMapBlueActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate (Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_bottom_sheet_basic);
+    setContentView(R.layout.activity_bottom_navigation_map_blue);
   }
 }

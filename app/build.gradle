@@ -7,7 +7,7 @@ android {
   compileSdkVersion 28
   defaultConfig {
     applicationId "me.weicools.material.component"
-    minSdkVersion 22
+    minSdkVersion 21
     targetSdkVersion 28
     versionCode 1
     versionName "1.0"
@@ -27,7 +27,7 @@ android {
 
     javaCompileOptions {
       annotationProcessorOptions {
-        arguments = [AROUTER_MODULE_NAME: project.getName()]
+        arguments = [moduleName: project.getName()]
       }
     }
   }
@@ -46,46 +46,38 @@ dependencies {
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
   // Support Library
-  implementation "com.android.support:design:$support_version"
-  implementation "com.android.support:support-v4:$support_version"
-  implementation "com.android.support:customtabs:$support_version"
-  implementation "com.android.support:cardview-v7:$support_version"
-  implementation "com.android.support:appcompat-v7:$support_version"
-  implementation "com.android.support.constraint:constraint-layout:$constrain_version"
+  implementation rootProject.ext.deps["XMaterialDesign"]
+  implementation rootProject.ext.deps["XSupportV4"]
+  implementation rootProject.ext.deps["XCustomTabs"]
+  implementation rootProject.ext.deps["XCardView"]
+  implementation rootProject.ext.deps["XAppcompat"]
+  implementation rootProject.ext.deps["XConstraintLayout"]
 
-  // Rx series
-  implementation "io.reactivex.rxjava2:rxjava:$rxjava"
-  implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
-  implementation "zlc.season:rxdownload3:$rxdownload"
+  implementation rootProject.ext.deps["RxJava2"]
+  implementation rootProject.ext.deps["RxAndroid2"]
+  implementation rootProject.ext.deps["RxDownload"]
 
-  // Retrofit series
-  implementation "com.squareup.retrofit2:retrofit:$retrofit"
-  implementation "com.squareup.retrofit2:converter-gson:$retrofit"
-  implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+  implementation rootProject.ext.deps["Retrofit"]
+  implementation rootProject.ext.deps["RetrofitConverterGson"]
+  implementation rootProject.ext.deps["RetrofitAdapterRxJava2"]
 
-  // json
-  implementation "com.google.code.gson:gson:$gson"
+  implementation rootProject.ext.deps["Gson"]
 
-  // Image load
-  implementation "com.github.chrisbanes:PhotoView:$photo"
-  implementation "com.github.bumptech.glide:glide:$glide"
-  implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-  kapt "com.github.bumptech.glide:compiler:$glide"
+  implementation rootProject.ext.deps["PhotoView"]
+  implementation rootProject.ext.deps["Glide"]
+  kapt rootProject.ext.deps["GlideCompiler"]
 
-  // ButterKnife
-  implementation "com.jakewharton:butterknife:$butterknife"
-  kapt "com.jakewharton:butterknife-compiler:$butterknife"
+  implementation rootProject.ext.deps["ButterKnife"]
+  kapt rootProject.ext.deps["ButterKnifeCompiler"]
 
-  // Router
-  implementation "com.alibaba:arouter-api:$arouter_api"
-  kapt "com.alibaba:arouter-compiler:$arouter_compiler"
+  implementation rootProject.ext.deps["Arouter"]
+  kapt rootProject.ext.deps["ArouterCompiler"]
 
-  // ui library
-  implementation "com.nex3z:flow-layout:$flow_layout"
-  implementation "com.aurelhubert:ahbottomnavigation:$ahbottom"
-  implementation "com.github.daniel-stoneuk:material-about-library:$about"
-  //implementation "com.hootsuite.android:nachos:$nachos"
-  //implementation "com.wdullaer:materialdatetimepicker:$datetimepicker"
-  //implementation "com.mikhaellopez:circularimageview:$circularimageview"
-  //implementation "com.github.pchmn:MaterialChipsInput:$MaterialChipsInput"
+  implementation rootProject.ext.deps["Nachos"]
+  implementation rootProject.ext.deps["FlowLayout"]
+  implementation rootProject.ext.deps["CircularImageView"]
+  implementation rootProject.ext.deps["AhBottomNavigation"]
+  implementation rootProject.ext.deps["MaterialChipsInput"]
+  implementation rootProject.ext.deps["MaterialAboutLibrary"]
+  implementation rootProject.ext.deps["MaterialDateTimePicker"]
 }
