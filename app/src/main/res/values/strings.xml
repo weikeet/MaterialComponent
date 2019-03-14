@@ -1,3 +1,5 @@
 <resources>
   <string name="app_name">MaterialComponent</string>
+  <string name="version_unknown">Unknown</string>
+  <string name="app_version">Version</string>
 </resources>
