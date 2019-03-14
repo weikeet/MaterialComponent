@@ -42,42 +42,41 @@ android {
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  // kotlin plugin
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-  // Support Library
-  implementation rootProject.ext.deps["XMaterialDesign"]
-  implementation rootProject.ext.deps["XSupportV4"]
-  implementation rootProject.ext.deps["XCustomTabs"]
-  implementation rootProject.ext.deps["XCardView"]
-  implementation rootProject.ext.deps["XAppcompat"]
-  implementation rootProject.ext.deps["XConstraintLayout"]
+  implementation DepLibs.KotlinLib
 
-  implementation rootProject.ext.deps["RxJava2"]
-  implementation rootProject.ext.deps["RxAndroid2"]
-  implementation rootProject.ext.deps["RxDownload"]
+  implementation DepLibs.xMaterialDesign
+  implementation DepLibs.xSupportV4
+  implementation DepLibs.xCustomTabs
+  implementation DepLibs.xCardView
+  implementation DepLibs.xAppcompat
+  implementation DepLibs.xConstraintLayout
 
-  implementation rootProject.ext.deps["Retrofit"]
-  implementation rootProject.ext.deps["RetrofitConverterGson"]
-  implementation rootProject.ext.deps["RetrofitAdapterRxJava2"]
+  implementation DepLibs.rxJava2
+  implementation DepLibs.rxAndroid2
+  implementation DepLibs.rxDownload
 
-  implementation rootProject.ext.deps["Gson"]
+  implementation DepLibs.retrofit
+  implementation DepLibs.retrofitConverterGson
+  implementation DepLibs.retrofitAdapterRxJava2
 
-  implementation rootProject.ext.deps["PhotoView"]
-  implementation rootProject.ext.deps["Glide"]
-  kapt rootProject.ext.deps["GlideCompiler"]
+  implementation DepLibs.gson
 
-  implementation rootProject.ext.deps["ButterKnife"]
-  kapt rootProject.ext.deps["ButterKnifeCompiler"]
+  implementation DepLibs.photoView
+  implementation DepLibs.glide
+  kapt DepLibs.glideCompiler
 
-  implementation rootProject.ext.deps["Arouter"]
-  kapt rootProject.ext.deps["ArouterCompiler"]
+  implementation DepLibs.butterKnifeX
+  kapt DepLibs.butterKnifeXCompiler
 
-  implementation rootProject.ext.deps["Nachos"]
-  implementation rootProject.ext.deps["FlowLayout"]
-  implementation rootProject.ext.deps["CircularImageView"]
-  implementation rootProject.ext.deps["AhBottomNavigation"]
-  implementation rootProject.ext.deps["MaterialChipsInput"]
-  implementation rootProject.ext.deps["MaterialAboutLibrary"]
-  implementation rootProject.ext.deps["MaterialDateTimePicker"]
+  implementation DepLibs.arouter
+  kapt DepLibs.arouterCompiler
+
+  implementation DepLibs.nachos
+  implementation DepLibs.flowLayout
+  implementation DepLibs.circularImageView
+  implementation DepLibs.ahBottomNavigation
+  implementation DepLibs.materialChipsInput
+  implementation DepLibs.materialAboutLibrary
+  implementation DepLibs.materialDateTimePicker
 }
