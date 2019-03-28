@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -32,14 +31,11 @@ import androidx.annotation.DrawableRes;
 import androidx.appcompat.widget.Toolbar;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.drawable.RoundedBitmapDrawable;
-import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
 import androidx.core.os.EnvironmentCompat;
 import androidx.core.widget.NestedScrollView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import me.weicools.material.component.R;
@@ -397,6 +393,15 @@ public class Tools {
       activity.startActivityForResult(build.intent, 509);
     } else {
       Toast.makeText(activity, "Ops, Cannot open url", Toast.LENGTH_LONG).show();
+    }
+  }
+
+  public static void setSystemBarColorInt(Activity activity, @ColorInt int i) {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      Window window = activity.getWindow();
+      window.addFlags(Integer.MIN_VALUE);
+      window.clearFlags(67108864);
+      window.setStatusBarColor(i);
     }
   }
 }

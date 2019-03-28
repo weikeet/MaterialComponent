@@ -79,4 +79,5 @@ dependencies {
   implementation DepLibs.materialChipsInput
   implementation DepLibs.materialAboutLibrary
   implementation DepLibs.materialDateTimePicker
+  implementation DepLibs.materialRipple
 }
