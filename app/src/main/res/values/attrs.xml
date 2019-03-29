@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <attr name="backgroundColors" format="color" />
+  <attr name="textColorSearchUrl" format="reference|color" />
+  <attr name="textColorSecondary" format="color" />
+  <attr name="textColors" format="color" />
+  
+  <attr name="navActive" format="color"/>
+  <attr name="navInActive" format="color"/>
+  
+</resources>

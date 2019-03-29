@@ -5,6 +5,14 @@
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorAccent">@color/colorAccent</item>
+    
+    <item name="backgroundColors">@android:color/white</item>
+    <item name="android:textColorSecondary">@color/fontColor</item>
+    <item name="textColorSecondary">@color/fontColor</item>
+    <item name="textColors">@color/colorPrimaryDark</item>
+  
+    <item name="navActive">@color/blue_A200</item>
+    <item name="navInActive">@color/fontColor</item>
   </style>
   
   <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

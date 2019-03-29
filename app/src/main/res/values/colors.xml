@@ -14,6 +14,8 @@
   <color name="colorPrimaryLight">#1e88e5</color>
   <color name="colorChipViewBackground">#e0e0e0</color>
   
+  <color name="fontColor">#000000</color>
+  
   <color name="transparent">#00ffffff</color>
   <color name="white_transparency">#b9ffffff</color>
   <color name="chips_opened_bg">#009688</color>
