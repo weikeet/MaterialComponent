@@ -66,12 +66,6 @@ dependencies {
   implementation DepLibs.glide
   kapt DepLibs.glideCompiler
 
-  implementation DepLibs.butterKnifeX
-  kapt DepLibs.butterKnifeXCompiler
-
-  implementation DepLibs.arouter
-  kapt DepLibs.arouterCompiler
-
   implementation DepLibs.nachos
   implementation DepLibs.flowLayout
   implementation DepLibs.circularImageView
