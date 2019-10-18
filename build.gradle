@@ -7,9 +7,8 @@ buildscript {
   }
 
   dependencies {
-    classpath DepLibs.androidPlugin
-    classpath DepLibs.kotlinPlugin
-    classpath DepLibs.butterKnifeXPlugin
+    classpath DepLibs.AndroidPlugin
+    classpath DepLibs.KotlinPlugin
   }
 }
 

@@ -4,11 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-  compileSdkVersion 28
+  compileSdkVersion 29
   defaultConfig {
     applicationId "me.weicools.material.component"
     minSdkVersion 21
-    targetSdkVersion 28
+    targetSdkVersion 29
     versionCode 1
     versionName "1.0"
 
@@ -45,33 +45,33 @@ dependencies {
 
   implementation DepLibs.KotlinLib
 
-  implementation DepLibs.xMaterialDesign
-  implementation DepLibs.xSupportV4
-  implementation DepLibs.xCustomTabs
-  implementation DepLibs.xCardView
-  implementation DepLibs.xAppcompat
-  implementation DepLibs.xConstraintLayout
+  implementation AndroidLibs.XMaterialDesign
+  implementation AndroidLibs.XSupportV4
+  implementation AndroidLibs.XCustomTabs
+  implementation AndroidLibs.XCardView
+  implementation AndroidLibs.XAppCompat
+  implementation AndroidLibs.XConstraintLayout
 
-  implementation DepLibs.rxJava2
-  implementation DepLibs.rxAndroid2
-  implementation DepLibs.rxDownload
+  implementation RxLibs.RxJava2
+  implementation RxLibs.RxAndroid2
+  implementation RxLibs.RxDownload
 
-  implementation DepLibs.retrofit
-  implementation DepLibs.retrofitConverterGson
-  implementation DepLibs.retrofitAdapterRxJava2
+  implementation NetworkLibs.Retrofit
+  implementation NetworkLibs.RetrofitConverterGson
+  implementation NetworkLibs.RetrofitAdapterRxJava2
 
-  implementation DepLibs.gson
+  implementation DepLibs.Gson
 
-  implementation DepLibs.photoView
-  implementation DepLibs.glide
-  kapt DepLibs.glideCompiler
+  implementation WidgetLibs.PhotoView
+  implementation ImageLoaderLibs.Glide
+  kapt ImageLoaderLibs.GlideCompiler
 
-  implementation DepLibs.nachos
-  implementation DepLibs.flowLayout
-  implementation DepLibs.circularImageView
-  implementation DepLibs.ahBottomNavigation
-  implementation DepLibs.materialChipsInput
-  implementation DepLibs.materialAboutLibrary
-  implementation DepLibs.materialDateTimePicker
-  implementation DepLibs.materialRipple
+  implementation WidgetLibs.Nachos
+  implementation WidgetLibs.FlowLayout
+  implementation WidgetLibs.CircularImageView
+  implementation WidgetLibs.AHBottomNavigation
+  implementation WidgetLibs.MaterialChipsInput
+  implementation WidgetLibs.MaterialAboutLibrary
+  implementation WidgetLibs.MaterialDateTimePicker
+  implementation WidgetLibs.MaterialRipple
 }
