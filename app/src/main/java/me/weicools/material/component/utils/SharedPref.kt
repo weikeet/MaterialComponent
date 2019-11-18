@@ -4,6 +4,17 @@ import android.content.Context
 import android.content.SharedPreferences
 
 class SharedPref(private val context: Context) {
+  companion object {
+    private val CLICK_INTERS = "_.MAX_CLICK_INTERS "
+    private val CLICK_OFFER = "_.MAX_CLICK_OFFER"
+    private val CLICK_SWITCH = "_.MAX_CLICK_SWITCH"
+    private val FCM_PREF_KEY = "_.FCM_PREF_KEY"
+    private val FIRST_LAUNCH = "_.FIRST_LAUNCH"
+    private val MAX_CLICK_INTERS = 10
+    private val MAX_CLICK_OFFER = 10
+    private val NEED_REGISTER = "_.NEED_REGISTER"
+  }
+
   private val sharedPreferences: SharedPreferences
 
   var isFirstLaunch: Boolean
@@ -52,16 +63,5 @@ class SharedPref(private val context: Context) {
     }
     this.sharedPreferences.edit().putInt(CLICK_INTERS, i).apply()
     return z
-  }
-
-  companion object {
-    private val CLICK_INTERS = "_.MAX_CLICK_INTERS "
-    private val CLICK_OFFER = "_.MAX_CLICK_OFFER"
-    private val CLICK_SWITCH = "_.MAX_CLICK_SWITCH"
-    private val FCM_PREF_KEY = "_.FCM_PREF_KEY"
-    private val FIRST_LAUNCH = "_.FIRST_LAUNCH"
-    private val MAX_CLICK_INTERS = 10
-    private val MAX_CLICK_OFFER = 10
-    private val NEED_REGISTER = "_.NEED_REGISTER"
   }
 }

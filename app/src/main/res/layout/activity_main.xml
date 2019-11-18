@@ -1,59 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:id="@+id/rl_main"
+  android:id="@+id/container"
   android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:animateLayoutChanges="true"
-  android:background="?attr/backgroundColors">
-  
-  <com.google.android.material.appbar.AppBarLayout
-    android:id="@+id/app_bar_layout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?attr/backgroundColors"
-    android:elevation="0dp"
-    android:paddingTop="@dimen/appbar_padding_top"
-    app:elevation="0dp">
-    
-    <androidx.appcompat.widget.Toolbar
-      android:id="@+id/toolbar"
-      android:layout_width="match_parent"
-      android:layout_height="?attr/actionBarSize"
-      android:background="?attr/backgroundColors"
-      app:contentInsetEnd="0dp"
-      app:contentInsetStart="0dp">
-      
-      <TextView
-        android:id="@+id/toolbar_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Code X"
-        android:textColor="?attr/textColors"
-        android:textSize="20sp" />
-    </androidx.appcompat.widget.Toolbar>
-  </com.google.android.material.appbar.AppBarLayout>
-  
-  <androidx.viewpager.widget.ViewPager
-    android:id="@+id/view_pager"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_below="@+id/app_bar_layout"
-    android:background="?attr/backgroundColors"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-  
-  <!--style="@style/Widget.MaterialComponents.BottomNavigationView"-->
-  <com.google.android.material.bottomnavigation.BottomNavigationView
-    android:id="@+id/main_bottom_navigation"
-    android:layout_width="match_parent"
-    android:layout_height="56dp"
-    android:layout_alignParentBottom="true"
-    android:background="?attr/backgroundColors"
-    app:elevation="20dp"
-    app:itemIconTint="@drawable/nav_tint"
-    app:itemTextColor="@drawable/nav_tint"
-    app:menu="@menu/menu_main_bottom" />
-</RelativeLayout>
+  android:layout_height="match_parent" />

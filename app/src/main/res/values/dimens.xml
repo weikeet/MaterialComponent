@@ -43,4 +43,6 @@
   <dimen name="tile_letter_font_size">17sp</dimen>
   <dimen name="viewpager_margin_overlap">-60dp</dimen>
   <dimen name="viewpager_margin_overlap_payment">-30dp</dimen>
+  <dimen name="toc_item_size">180dp</dimen>
+  <dimen name="main_item_feature_size">180dp</dimen>
 </resources>

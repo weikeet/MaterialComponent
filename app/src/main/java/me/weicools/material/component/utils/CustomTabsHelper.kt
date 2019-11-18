@@ -11,15 +11,15 @@ import android.util.Log
 import java.util.ArrayList
 
 object CustomTabsHelper {
-  private val TAG = "CustomTabsHelper"
+  private const val TAG = "CustomTabsHelper"
 
-  private val DEV_PACKAGE = "com.chrome.dev"
-  private val BETA_PACKAGE = "com.chrome.beta"
-  private val STABLE_PACKAGE = "com.android.chrome"
-  private val LOCAL_PACKAGE = "com.google.android.apps.chrome"
+  private const val DEV_PACKAGE = "com.chrome.dev"
+  private const val BETA_PACKAGE = "com.chrome.beta"
+  private const val STABLE_PACKAGE = "com.android.chrome"
+  private const val LOCAL_PACKAGE = "com.google.android.apps.chrome"
 
-  private val EXTRA_CUSTOM_TABS_KEEP_ALIVE = "android.support.customtabs.extra.KEEP_ALIVE"
-  private val ACTION_CUSTOM_TABS_CONNECTION = "android.support.customtabs.action.CustomTabsService"
+  private const val EXTRA_CUSTOM_TABS_KEEP_ALIVE = "android.support.customtabs.extra.KEEP_ALIVE"
+  private const val ACTION_CUSTOM_TABS_CONNECTION = "android.support.customtabs.action.CustomTabsService"
 
   private var sPackageNameToUse: String? = null
 
@@ -36,10 +36,10 @@ object CustomTabsHelper {
     val arrayList = ArrayList<String>()
     val queryIntentActivities = packageManager.queryIntentActivities(intent, 0)
     for (resolveInfo in queryIntentActivities) {
-      val intent2 = Intent()
-      intent2.action = "android.support.customtabs.action.CustomTabsService"
-      intent2.setPackage(resolveInfo.activityInfo.packageName)
-      if (packageManager.resolveService(intent2, 0) != null) {
+      val tabsServiceIntent = Intent()
+      tabsServiceIntent.action = "android.support.customtabs.action.CustomTabsService"
+      tabsServiceIntent.setPackage(resolveInfo.activityInfo.packageName)
+      if (packageManager.resolveService(tabsServiceIntent, 0) != null) {
         arrayList.add(resolveInfo.activityInfo.packageName)
       }
     }
@@ -66,7 +66,7 @@ object CustomTabsHelper {
   private fun hasSpecializedHandlerIntents(context: Context, intent: Intent): Boolean {
     try {
       val queryIntentActivities = context.packageManager.queryIntentActivities(intent, PackageManager.GET_RESOLVED_FILTER)
-      if (queryIntentActivities == null || queryIntentActivities.size == 0) {
+      if (queryIntentActivities.size == 0) {
         return false
       }
 

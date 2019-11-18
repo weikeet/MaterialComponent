@@ -28,26 +28,23 @@ class BottomNavigationBasicActivity : AppCompatActivity() {
   }
 
   private fun initComponent() {
-    //todo setOnNavigationItemSelectedListener
-//    navigation.setOnNavigationItemSelectedListener { menuItem ->
-//      val itemId = menuItem.itemId
-//      when {
-//        itemId == R.id.navigation_favorites -> {
-//          search_text.text = menuItem.title
-//          return@setOnNavigationItemSelectedListener
-//        }
-//        itemId == R.id.navigation_nearby -> {
-//          search_text.text = menuItem.title
-//          return@setOnNavigationItemSelectedListener
-//        }
-//        itemId != R.id.navigation_recent -> {
-//        }
-//        else -> {
-//          search_text.text = menuItem.title
-//          return@setOnNavigationItemSelectedListener
-//        }
-//      }
-//    }
+    navigation.setOnNavigationItemSelectedListener { menuItem ->
+      val itemId = menuItem.itemId
+      when {
+        itemId == R.id.navigation_favorites -> {
+          search_text.text = menuItem.title
+        }
+        itemId == R.id.navigation_nearby -> {
+          search_text.text = menuItem.title
+        }
+        itemId != R.id.navigation_recent -> {
+        }
+        else -> {
+          search_text.text = menuItem.title
+        }
+      }
+      true
+    }
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
       findViewById<View>(R.id.nested_scroll_view).setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->

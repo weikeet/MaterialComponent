@@ -45,11 +45,11 @@ dependencies {
 
   implementation DepLibs.KotlinLib
 
+  implementation AndroidLibs.XAppCompat
   implementation AndroidLibs.XMaterialDesign
+  implementation AndroidLibs.XCardView
   implementation AndroidLibs.XSupportV4
   implementation AndroidLibs.XCustomTabs
-  implementation AndroidLibs.XCardView
-  implementation AndroidLibs.XAppCompat
   implementation AndroidLibs.XConstraintLayout
 
   implementation RxLibs.RxJava2
