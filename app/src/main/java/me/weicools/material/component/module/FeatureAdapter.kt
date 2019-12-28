@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_main_design.*
 import kotlinx.android.synthetic.main.main_item_feature.view.*
 import me.weicools.material.component.R
 import me.weicools.material.component.module.FeatureData.Companion.STATUS_WIP
@@ -15,7 +14,8 @@ import me.weicools.material.component.module.FeatureData.Companion.STATUS_WIP
  *
  * desc:
  */
-class FeatureAdapter(private val activity: Activity, private val featureList: ArrayList<FeatureData>) : RecyclerView.Adapter<FeatureAdapter.FeatureHolder>() {
+class FeatureAdapter(private val activity: Activity, private val featureList: ArrayList<FeatureData>)
+  : RecyclerView.Adapter<FeatureAdapter.FeatureHolder>() {
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeatureHolder {
     return FeatureHolder(LayoutInflater.from(activity).inflate(R.layout.main_item_feature, parent, false))
