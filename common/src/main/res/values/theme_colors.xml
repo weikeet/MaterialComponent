@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimary0">#4285f4</color>
+    <color name="colorPrimaryDark0">#3367d6</color>
+    <color name="colorAccent0">#FFC400</color>
+
+    <color name="colorPrimary1">#FF7099</color>
+    <color name="colorPrimaryDark1">#E7507D</color>
+    <color name="colorAccent1">#0F94EF</color>
+
+    <color name="colorPrimary2">#1869E5</color>
+    <color name="colorPrimaryDark2">#0048C9</color>
+    <color name="colorAccent2">#F3BFBF</color>
+    <color name="colorAccentDark2">#C92B2E</color>
+
+    <color name="colorPrimary3">#212121</color>
+    <color name="colorPrimaryDark3">#000000</color>
+    <color name="colorAccent3">#D5D5D5</color>
+    <color name="colorAccentDark3">#737373</color>
+
+    <color name="colorPrimary4">#008BE1</color>
+    <color name="colorPrimaryDark4">#0077CD</color>
+    <color name="colorAccent4">#FFEEC2</color>
+    <color name="colorAccentDark4">#FFC548</color>
+
+    <color name="colorPrimary5">#577D8A</color>
+    <color name="colorPrimaryDark5">#3F5A63</color>
+    <color name="colorAccent5">#DBE3E6</color>
+    <color name="colorAccentDark5">#88A1AA</color>
+
+    <color name="colorPrimary6">#7F544A</color>
+    <color name="colorPrimaryDark6">#624038</color>
+    <color name="colorAccent6">#E5DBD8</color>
+    <color name="colorAccentDark6">#A3857D</color>
+
+    <color name="colorPrimary7">#705C50</color>
+    <color name="colorPrimaryDark7">#534640</color>
+    <color name="colorAccent7">#FACCCB</color>
+    <color name="colorAccentDark7">#E55352</color>
+
+    <color name="colorPrimary8">#6D3BB2</color>
+    <color name="colorPrimaryDark8">#552FA3</color>
+    <color name="colorAccent8">#FFD3E0</color>
+    <color name="colorAccentDark8">#FF6E96</color>
+
+    <color name="colorPrimary9">#9E9E9E</color>
+    <color name="colorPrimaryDark9">#616161</color>
+    <color name="colorAccent9">#C1E9E6</color>
+    <color name="colorAccentDark9">#00B2A9</color>
+
+    <color name="colorPrimaryA">#3852B0</color>
+    <color name="colorPrimaryDarkA">#2A409A</color>
+    <color name="colorAccentA">#FFD3E0</color>
+    <color name="colorAccentDarkA">#FF6E96</color>
+
+    <color name="colorPrimaryB">#FF9633</color>
+    <color name="colorPrimaryDarkB">#FF7A2C</color>
+    <color name="colorAccentB">#FFE8CC</color>
+    <color name="colorAccentDarkB">#FFB25B</color>
+
+    <color name="colorPrimaryC">#FF7099</color>
+    <color name="colorPrimaryDarkC">#E75F82</color>
+    <color name="colorAccentC">#FFB8CC</color>
+    <color name="colorAccentDarkC">#FFC3D4</color>
+
+    <color name="colorPrimaryD">#FF3B82</color>
+    <color name="colorPrimaryDarkD">#D40F5B</color>
+    <color name="colorAccentD">#FFEEC2</color>
+    <color name="colorAccentDarkD">#FFC549</color>
+
+    <color name="colorPrimaryE">#EE403F</color>
+    <color name="colorPrimaryDarkE">#D63532</color>
+    <color name="colorAccentE">#FFEEC2</color>
+    <color name="colorAccentDarkE">#FFC549</color>
+
+    <color name="colorPrimaryF">#009688</color>
+    <color name="colorPrimaryDarkF">#00796B</color>
+    <color name="colorAccentF">#FFEBC4</color>
+    <color name="colorAccentDarkF">#FFBB49</color>
+
+    <color name="colorPrimaryG">#2C2C2C</color>
+    <color name="colorPrimaryDarkG">#2C2C2C</color>
+    <color name="colorAccentG">#636363</color>
+    <color name="colorAccentDarkG">#D2D2D2</color>
+</resources>

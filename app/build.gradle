@@ -33,8 +33,12 @@ android {
   }
 
   buildTypes {
-    release {
+    debug {
       minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+    release {
+      minifyEnabled true
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
@@ -52,20 +56,6 @@ dependencies {
   implementation AndroidLibs.XCustomTabs
   implementation AndroidLibs.XConstraintLayout
 
-  implementation RxLibs.RxJava2
-  implementation RxLibs.RxAndroid2
-  implementation RxLibs.RxDownload
-
-  implementation NetworkLibs.Retrofit
-  implementation NetworkLibs.RetrofitConverterGson
-  implementation NetworkLibs.RetrofitAdapterRxJava2
-
-  implementation DepLibs.Gson
-
-  implementation WidgetLibs.PhotoView
-  implementation ImageLoaderLibs.Glide
-  kapt ImageLoaderLibs.GlideCompiler
-
   implementation WidgetLibs.Nachos
   implementation WidgetLibs.FlowLayout
   implementation WidgetLibs.CircularImageView
@@ -74,4 +64,8 @@ dependencies {
   implementation WidgetLibs.MaterialAboutLibrary
   implementation WidgetLibs.MaterialDateTimePicker
   implementation WidgetLibs.MaterialRipple
+
+  implementation project(':bottom-navigation')
+  implementation project(':expansion-panel')
+  api project(':common')
 }

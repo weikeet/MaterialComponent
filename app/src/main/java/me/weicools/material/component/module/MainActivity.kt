@@ -1,19 +1,17 @@
 package me.weicools.material.component.module
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.math.MathUtils
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.viewpager.widget.ViewPager
-import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.ArrayList
 import me.weicools.material.component.R
-import me.weicools.material.component.common.adapter.CommonFragmentPagerAdapter
+import me.weicools.material.component.bottom.navigation.BottomNavigationBasicActivity
+import mel.weicools.material.component.expansion.panel.ExpansionPanelBasicActivity
 import kotlin.math.abs
 
 /**
@@ -26,7 +24,6 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
-
 
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       addGridTopDividerVisibilityListener()
@@ -48,6 +45,7 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun addGridTopDividerVisibilityListener() {
+    app_bar_layout.setOnClickListener { startActivity(Intent(this, ExpansionPanelBasicActivity::class.java)) }
     app_bar_layout.addOnOffsetChangedListener(OnOffsetChangedListener { _, verticalOffset ->
       if (abs(verticalOffset) == app_bar_layout.totalScrollRange) {
         // CTL is collapsed, hide top divider

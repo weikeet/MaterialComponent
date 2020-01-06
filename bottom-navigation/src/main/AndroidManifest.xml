@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.weicools.material.component.bottom.navigation">
+
+    <application>
+        <activity android:name=".BottomNavigationBasicActivity" />
+        <activity android:name=".BottomNavigationDarkActivity" />
+        <activity android:name=".BottomNavigationIconActivity" />
+        <activity android:name=".BottomNavigationLightActivity" />
+        <activity android:name=".BottomNavigationMapBlueActivity" />
+        <activity android:name=".BottomNavigationPrimaryActivity" />
+        <activity android:name=".BottomNavigationShiftingActivity" />
+    </application>
+</manifest>

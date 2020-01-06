@@ -21,13 +21,7 @@
     </activity>
     
     <activity android:name=".module.search.SearchHistoryCardActivity" />
-    <activity android:name=".module.navigation.bottom.BottomNavigationBasicActivity" />
-    <activity android:name=".module.navigation.bottom.BottomNavigationDarkActivity" />
-    <activity android:name=".module.navigation.bottom.BottomNavigationIconActivity" />
-    <activity android:name=".module.navigation.bottom.BottomNavigationLightActivity" />
-    <activity android:name=".module.navigation.bottom.BottomNavigationMapBlueActivity" />
-    <activity android:name=".module.navigation.bottom.BottomNavigationPrimaryActivity" />
-    <activity android:name=".module.navigation.bottom.BottomNavigationShiftingActivity" />
+
     <activity android:name=".module.sheet.bottom.BottomSheetBasicActivity" />
     <activity android:name=".module.button.ButtonBasicActivity" />
     <activity android:name=".module.card.CardBasicActivity" />
@@ -35,7 +29,6 @@
     <activity android:name=".module.chip.ChipTagActivity" />
     <activity android:name=".module.dashboard.DashboardFlightActivity" />
     <activity android:name=".module.dialog.DialogAddPostActivity" />
-    <activity android:name=".module.panel.expansion.ExpansionPanelBasicActivity" />
     <activity android:name=".module.form.FormLoginActivity" />
     <activity android:name=".module.grid.GridAlbumsActivity" />
     <activity android:name=".module.list.ListAnimationActivity" />

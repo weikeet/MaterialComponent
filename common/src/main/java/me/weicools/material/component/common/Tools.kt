@@ -1,19 +1,14 @@
-package me.weicools.material.component.utils
+package me.weicools.material.component.common
 
 import android.app.Activity
 import android.app.Dialog
 import android.content.ActivityNotFoundException
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.res.Resources
-import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.PorterDuff
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
@@ -21,7 +16,6 @@ import android.util.TypedValue
 import android.view.Menu
 import android.view.View
 import android.view.ViewPropertyAnimator
-import android.view.Window
 import android.view.WindowManager
 import android.webkit.URLUtil
 import android.widget.ImageView
@@ -32,16 +26,12 @@ import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.Toolbar
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.drawable.RoundedBitmapDrawable
-import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import androidx.core.os.EnvironmentCompat
 import androidx.core.widget.NestedScrollView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
-import com.bumptech.glide.request.target.BitmapImageViewTarget
 import java.text.SimpleDateFormat
-import me.weicools.material.component.R
 import java.util.*
 import kotlin.math.roundToInt
 
@@ -81,15 +71,6 @@ object Tools {
       return stringBuilder.toString()
     }
 
-  fun setSystemBarColor(activity: Activity) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-      val window = activity.window
-      window.addFlags(Integer.MIN_VALUE)
-      window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-      window.statusBarColor = ContextCompat.getColor(activity, R.color.colorPrimaryDark)
-    }
-  }
-
   fun setSystemBarColor(activity: Activity, @ColorRes i: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       val window = activity.window
@@ -124,11 +105,11 @@ object Tools {
     }
   }
 
-  fun clearSystemBarLight(activity: Activity) {
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-      activity.window.statusBarColor = ContextCompat.getColor(activity, R.color.colorPrimaryDark)
-    }
-  }
+  // fun clearSystemBarLight(activity: Activity) {
+  //   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+  //     activity.window.statusBarColor = ContextCompat.getColor(activity, R.color.colorPrimaryDark)
+  //   }
+  // }
 
   fun setSystemBarTransparent(activity: Activity) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -300,26 +281,26 @@ object Tools {
     }
   }
 
-  fun getVersionName(context: Context): String {
-    return try {
-      val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
-      val stringBuilder = StringBuilder()
-      stringBuilder.append(context.getString(R.string.app_version))
-      stringBuilder.append(" ")
-      stringBuilder.append(packageInfo.versionName)
-      stringBuilder.toString()
-    } catch (unused: PackageManager.NameNotFoundException) {
-      context.getString(R.string.version_unknown)
-    }
-  }
+  // fun getVersionName(context: Context): String {
+  //   return try {
+  //     val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+  //     val stringBuilder = StringBuilder()
+  //     stringBuilder.append(context.getString(R.string.app_version))
+  //     stringBuilder.append(" ")
+  //     stringBuilder.append(packageInfo.versionName)
+  //     stringBuilder.toString()
+  //   } catch (unused: PackageManager.NameNotFoundException) {
+  //     context.getString(R.string.version_unknown)
+  //   }
+  // }
 
-  fun getVersionNamePlain(context: Context): String {
-    return try {
-      context.packageManager.getPackageInfo(context.packageName, 0).versionName
-    } catch (unused: PackageManager.NameNotFoundException) {
-      context.getString(R.string.version_unknown)
-    }
-  }
+  // fun getVersionNamePlain(context: Context): String {
+  //   return try {
+  //     context.packageManager.getPackageInfo(context.packageName, 0).versionName
+  //   } catch (unused: PackageManager.NameNotFoundException) {
+  //     context.getString(R.string.version_unknown)
+  //   }
+  // }
 
   // fun getDeviceInfo(context: Context): DeviceInfo {
   //   val deviceInfo = DeviceInfo()
@@ -360,23 +341,23 @@ object Tools {
 
   }
 
-  fun openInAppBrowser(activity: Activity, str: String, z: Boolean) {
-    val builder = CustomTabsIntent.Builder()
-    builder.setToolbarColor(activity.resources.getColor(R.color.grey_90))
-    builder.setSecondaryToolbarColor(activity.resources.getColor(R.color.colorPrimary))
-    val build = builder.build()
-    val packageNameToUse = CustomTabsHelper.getPackageNameToUse(activity)
-    if (packageNameToUse == null) {
-      // TODO: 2019/1/23 start webView
-      //ActivityWebView.navigate(activity, str, z);
-    } else if (URLUtil.isValidUrl(str)) {
-      build.intent.setPackage(packageNameToUse)
-      build.intent.data = Uri.parse(str)
-      activity.startActivityForResult(build.intent, 509)
-    } else {
-      Toast.makeText(activity, "Ops, Cannot open url", Toast.LENGTH_LONG).show()
-    }
-  }
+  // fun openInAppBrowser(activity: Activity, str: String, z: Boolean) {
+  //   val builder = CustomTabsIntent.Builder()
+  //   builder.setToolbarColor(ContextCompat.getColor(activity, R.color.grey_90))
+  //   builder.setSecondaryToolbarColor(ContextCompat.getColor(activity, R.color.colorPrimary))
+  //   val build = builder.build()
+  //   val packageNameToUse = CustomTabsHelper.getPackageNameToUse(activity)
+  //   if (packageNameToUse == null) {
+  //     // TODO: 2019/1/23 start webView
+  //     //ActivityWebView.navigate(activity, str, z);
+  //   } else if (URLUtil.isValidUrl(str)) {
+  //     build.intent.setPackage(packageNameToUse)
+  //     build.intent.data = Uri.parse(str)
+  //     activity.startActivityForResult(build.intent, 509)
+  //   } else {
+  //     Toast.makeText(activity, "Ops, Cannot open url", Toast.LENGTH_LONG).show()
+  //   }
+  // }
 
   fun setSystemBarColorInt(activity: Activity, @ColorInt i: Int) {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

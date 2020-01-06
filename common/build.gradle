@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion 29
+  buildToolsVersion "29.0.2"
+
+  defaultConfig {
+    minSdkVersion 21
+    targetSdkVersion 29
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes {
+    debug {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    release {
+      minifyEnabled true
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation DepLibs.KotlinLib
+
+  implementation AndroidLibs.AndroidXCoreKtx
+
+  implementation AndroidLibs.XAppCompat
+  implementation AndroidLibs.XMaterialDesign
+  implementation AndroidLibs.XCardView
+  implementation AndroidLibs.XSupportV4
+  implementation AndroidLibs.XCustomTabs
+  implementation AndroidLibs.XConstraintLayout
+
+  api RxLibs.RxJava2
+  api RxLibs.RxAndroid2
+  api RxLibs.RxDownload
+
+  api NetworkLibs.Retrofit
+  api NetworkLibs.RetrofitConverterGson
+  api NetworkLibs.RetrofitAdapterRxJava2
+
+  api DepLibs.Gson
+
+  api WidgetLibs.PhotoView
+  api ImageLoaderLibs.Glide
+  kapt ImageLoaderLibs.GlideCompiler
+}
