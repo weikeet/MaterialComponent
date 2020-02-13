@@ -1,1 +1,1 @@
-include ':app', ':bottom-navigation', ':common', ':expansion-panel'
+include ':app', ':bottom-navigation', ':common', ':expansion-panel', ':multitype'
