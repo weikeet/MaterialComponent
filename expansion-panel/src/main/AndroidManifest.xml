@@ -1,7 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mel.weicools.material.component.expansion.panel" >
+    package="mel.weicools.material.component.expansion.panel">
 
     <application>
+        <activity android:name=".ExpansionPanelSummaryActivity" />
         <activity android:name=".ExpansionPanelBasicActivity" />
+        <activity android:name=".ExpansionPanelInvoiceActivity" />
+        <activity android:name=".ExpansionPanelTicketActivity" />
     </application>
 </manifest>

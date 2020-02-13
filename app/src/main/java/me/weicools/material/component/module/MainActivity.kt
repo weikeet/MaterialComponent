@@ -10,8 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import kotlinx.android.synthetic.main.activity_main.*
 import me.weicools.material.component.R
-import me.weicools.material.component.bottom.navigation.BottomNavigationBasicActivity
-import mel.weicools.material.component.expansion.panel.ExpansionPanelBasicActivity
+import mel.weicools.material.component.expansion.panel.ExpansionPanelSummaryActivity
 import kotlin.math.abs
 
 /**
@@ -45,7 +44,7 @@ class MainActivity : AppCompatActivity() {
   }
 
   private fun addGridTopDividerVisibilityListener() {
-    app_bar_layout.setOnClickListener { startActivity(Intent(this, ExpansionPanelBasicActivity::class.java)) }
+    app_bar_layout.setOnClickListener { startActivity(Intent(this, ExpansionPanelSummaryActivity::class.java)) }
     app_bar_layout.addOnOffsetChangedListener(OnOffsetChangedListener { _, verticalOffset ->
       if (abs(verticalOffset) == app_bar_layout.totalScrollRange) {
         // CTL is collapsed, hide top divider
