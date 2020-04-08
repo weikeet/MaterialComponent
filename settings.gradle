@@ -1,1 +1,6 @@
-include ':app', ':md-bottom-navigation', ':common', ':md-expansion-panel', ':multitype'
+include ':app'
+include ':common'
+include ':multitype'
+include ':mdc-resource'
+include ':mdc-bottom-navigation', ':mdc-expansion-panel'
+include ':common-resource'

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import kotlinx.android.synthetic.main.activity_main.*
 import me.weicools.material.component.R
-import mel.weicools.material.component.expansion.panel.ExpansionPanelSummaryActivity
+import me.weicools.material.component.expansion.panel.ExpansionPanelSummaryActivity
 import kotlin.math.abs
 
 /**
