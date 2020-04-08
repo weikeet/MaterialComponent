@@ -65,7 +65,7 @@ dependencies {
   implementation WidgetLibs.MaterialDateTimePicker
   implementation WidgetLibs.MaterialRipple
 
-  implementation project(':bottom-navigation')
-  implementation project(':expansion-panel')
+  implementation project(':md-bottom-navigation')
+  implementation project(':md-expansion-panel')
   api project(':common')
 }
