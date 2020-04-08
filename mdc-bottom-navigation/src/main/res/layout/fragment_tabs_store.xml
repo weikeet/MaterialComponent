@@ -100,7 +100,7 @@
                             android:layout_height="wrap_content"
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:tint="@color/grey_40"
-                            app:srcCompat="@drawable/ic_more_vert" />
+                            app:srcCompat="@drawable/common_ic_more_vert_black" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -158,7 +158,7 @@
                             android:layout_height="wrap_content"
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:tint="@color/grey_40"
-                            app:srcCompat="@drawable/ic_more_vert" />
+                            app:srcCompat="@drawable/common_ic_more_vert_black" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -379,7 +379,7 @@
                             android:layout_height="wrap_content"
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:tint="@color/grey_40"
-                            app:srcCompat="@drawable/ic_more_vert" />
+                            app:srcCompat="@drawable/common_ic_more_vert_black" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -437,7 +437,7 @@
                             android:layout_height="wrap_content"
                             android:background="?attr/selectableItemBackgroundBorderless"
                             android:tint="@color/grey_40"
-                            app:srcCompat="@drawable/ic_more_vert" />
+                            app:srcCompat="@drawable/common_ic_more_vert_black" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

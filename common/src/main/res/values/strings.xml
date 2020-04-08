@@ -1,29 +1,3 @@
 <resources>
     <string name="app_name">common</string>
-
-    <string name="AGREE">AGREE</string>
-    <string name="BACK">BACK</string>
-    <string name="CANCEL">CANCEL</string>
-    <string name="CLOSE">CLOSE</string>
-    <string name="DELETE">DELETE</string>
-    <string name="DETAILS">DETAILS</string>
-    <string name="DISAGREE">DISAGREE</string>
-    <string name="DISCARD">DISCARD</string>
-    <string name="DISMISS">DISMISS</string>
-    <string name="FAILED">FAILED</string>
-    <string name="GOT_IT">GOT IT</string>
-    <string name="HIDE">HIDE</string>
-    <string name="NEXT">NEXT</string>
-    <string name="NO">NO</string>
-    <string name="NO_IMAGE">NO IMAGE</string>
-    <string name="OK">OK</string>
-    <string name="OPEN">OPEN</string>
-    <string name="RETRY">RETRY</string>
-    <string name="SAVE">SAVE</string>
-    <string name="SETTING">SETTING</string>
-    <string name="SKIP">SKIP</string>
-    <string name="TRY_AGAIN">TRY AGAIN</string>
-    <string name="TYPE_SEARCH">SEARCH</string>
-    <string name="UPDATE">UPDATE</string>
-    <string name="YES">YES</string>
 </resources>

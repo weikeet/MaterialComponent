@@ -1,6 +1,6 @@
 <resources>
     <!-- Layout -->
-    <!-- Metrics & Keylines -->
+    <!-- Metrics & KeyLines -->
     <!-- https://www.google.com/design/spec/layout/metrics-keylines.html#metrics-keylines-keylines-spacing -->
     <dimen name="material_layout_keylines_screen_edge_margin">24dp</dimen>
     <dimen name="material_layout_keylines_content_left_margin_from_screen_edge">80dp</dimen>

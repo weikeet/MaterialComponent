@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/navigation_recent"
-        android:icon="@drawable/ic_recent"
+        android:icon="@drawable/common_ic_recent_black"
         android:title="Recents" />
     <item
         android:id="@+id/navigation_favorites"
-        android:icon="@drawable/ic_favorites"
+        android:icon="@drawable/common_ic_favorites_white"
         android:title="Favorites" />
     <item
         android:id="@+id/navigation_nearby"
-        android:icon="@drawable/ic_nearby"
+        android:icon="@drawable/common_ic_nearby_black"
         android:title="Nearby" />
 </menu>

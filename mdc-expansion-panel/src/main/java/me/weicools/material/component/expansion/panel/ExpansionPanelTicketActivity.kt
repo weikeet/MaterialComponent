@@ -14,7 +14,7 @@ class ExpansionPanelTicketActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_expansion_panel_ticket)
 
-    toolbar.setNavigationIcon(R.drawable.ic_menu)
+    toolbar.setNavigationIcon(R.drawable.common_ic_menu_white)
     setSupportActionBar(toolbar)
     supportActionBar?.title = "Flight Ticket"
     supportActionBar?.setDisplayHomeAsUpEnabled(true)

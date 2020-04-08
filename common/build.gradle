@@ -39,8 +39,8 @@ dependencies {
   implementation AndroidLibs.XCustomTabs
   implementation AndroidLibs.XConstraintLayout
 
-  api RxLibs.RxJava2
-  api RxLibs.RxAndroid2
+  api RxLibs.RxJava3
+  api RxLibs.RxAndroid3
   api RxLibs.RxDownload
 
   api NetworkLibs.Retrofit

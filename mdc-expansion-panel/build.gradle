@@ -38,4 +38,6 @@ dependencies {
   implementation AndroidLibs.XConstraintLayout
 
   api project(':common')
+  api project(':common-resource')
+  api project(':mdc-resource')
 }
