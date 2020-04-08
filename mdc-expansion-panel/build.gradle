@@ -37,7 +37,7 @@ dependencies {
   implementation AndroidLibs.XCustomTabs
   implementation AndroidLibs.XConstraintLayout
 
-  api project(':common')
-  api project(':common-resource')
-  api project(':mdc-resource')
+  api project(':lib-common')
+  api project(':lib-common-resource')
+  api project(':mdc-common-resource')
 }

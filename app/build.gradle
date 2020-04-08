@@ -67,6 +67,6 @@ dependencies {
 
   implementation project(':mdc-bottom-navigation')
   implementation project(':mdc-expansion-panel')
-  api project(':common')
-  api project(':common-resource')
+  api project(':lib-common')
+  api project(':lib-common-resource')
 }
