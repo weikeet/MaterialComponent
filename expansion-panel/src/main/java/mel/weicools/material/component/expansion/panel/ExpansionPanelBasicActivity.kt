@@ -21,39 +21,34 @@ class ExpansionPanelBasicActivity : AppCompatActivity() {
   }
 
   private fun initComponent() {
-    lyt_expand_text.visibility = View.GONE
-    bt_toggle_text.setOnClickListener {
-      toggleSectionText(bt_toggle_text)
-    }
-    this.bt_hide_text.setOnClickListener {
-      toggleSectionText(bt_toggle_text)
-    }
-    this.lyt_expand_input.visibility = View.GONE
-    this.bt_toggle_input.setOnClickListener {
-      toggleSectionInput(bt_toggle_input)
-    }
-    this.bt_hide_input.setOnClickListener {
-      toggleSectionInput(bt_toggle_input)
-    }
-    this.bt_save_input.setOnClickListener {
+    llExpand.visibility = View.GONE
+    val toggleTextListener = View.OnClickListener { toggleSectionText(btnToggleText) }
+    btnToggleText.setOnClickListener(toggleTextListener)
+    btnHideText.setOnClickListener(toggleTextListener)
+
+    this.llExpandInput.visibility = View.GONE
+    val toggleInputListener = View.OnClickListener { toggleSectionInput(btnToggleInput) }
+    this.btnToggleInput.setOnClickListener(toggleInputListener)
+    this.btnHideInput.setOnClickListener(toggleInputListener)
+    this.btnSaveInput.setOnClickListener {
       // Snackbar.make(parent_view, "Data saved" as CharSequence, Snackbar.LENGTH_SHORT).show()
-      toggleSectionInput(bt_toggle_input)
+      toggleSectionInput(btnToggleInput)
     }
   }
 
   private fun toggleSectionText(view: View) {
     if (toggleArrow(view)) {
-      ViewAnimation.expand(this.lyt_expand_text) { Tools.nestedScrollTo(nested_scroll_view, lyt_expand_text) }
+      ViewAnimation.expand(this.llExpand) { Tools.nestedScrollTo(nestedScrollView, llExpand) }
     } else {
-      ViewAnimation.collapse(this.lyt_expand_text)
+      ViewAnimation.collapse(this.llExpand)
     }
   }
 
   private fun toggleSectionInput(view: View) {
     if (toggleArrow(view)) {
-      ViewAnimation.expand(this.lyt_expand_input) { Tools.nestedScrollTo(nested_scroll_view, lyt_expand_input) }
+      ViewAnimation.expand(this.llExpandInput) { Tools.nestedScrollTo(nestedScrollView, llExpandInput) }
     } else {
-      ViewAnimation.collapse(this.lyt_expand_input)
+      ViewAnimation.collapse(this.llExpandInput)
     }
   }
 
