@@ -1,16 +1,14 @@
-package me.weicools.material.component.utils
+package me.weicools.common.utils
 
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.content.pm.PackageManager
-import android.content.pm.ResolveInfo
 import android.net.Uri
 import android.text.TextUtils
 import android.util.Log
 import java.util.ArrayList
 
-object CustomTabsHelper {
+object CustomTabsUtils {
   private const val TAG = "CustomTabsHelper"
 
   private const val DEV_PACKAGE = "com.chrome.dev"
