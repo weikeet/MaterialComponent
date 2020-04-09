@@ -4,11 +4,16 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.math.MathUtils
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
+import me.weicools.common.preferences.RxPreferences
+import me.weicools.common.preferences.edit
 import me.weicools.material.component.R
 import me.weicools.material.component.expansion.panel.ExpansionPanelSummaryActivity
 import kotlin.math.abs
@@ -29,6 +34,18 @@ class MainActivity : AppCompatActivity() {
     } else {
       view_divider.visibility = View.VISIBLE
     }
+
+    RxPreferences.create(this, "MainSP")
+      .edit {
+        putBoolean("Fuck", true)
+        putLong("Date", System.currentTimeMillis())
+      }
+      .subscribeOn(Schedulers.io())
+      .observeOn(AndroidSchedulers.mainThread())
+      .subscribe(
+        { Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show() },
+        { error -> Toast.makeText(this, "Error: ${error.message}", Toast.LENGTH_SHORT).show() }
+      )
 
     val gridSpanCount = calculateGridSpanCount()
     recyclerView.layoutManager = GridLayoutManager(this, gridSpanCount)
