@@ -29,6 +29,6 @@ android {
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation DepLibs.KotlinLib7
-  api AndroidLibs.XRecyclerView
-  api AndroidLibs.XAnnotation
+  api AndroidXLibs.RecyclerView
+  api AndroidXLibs.Annotation
 }

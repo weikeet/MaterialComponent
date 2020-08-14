@@ -49,24 +49,18 @@ dependencies {
 
   implementation DepLibs.KotlinLib7
 
-  implementation AndroidLibs.XAppCompat
-  implementation AndroidLibs.XMaterialDesign
-  implementation AndroidLibs.XCardView
-  implementation AndroidLibs.XSupportV4
-  implementation AndroidLibs.XCustomTabs
-  implementation AndroidLibs.XConstraintLayout
+  implementation AndroidXLibs.AppCompat
+  implementation AndroidXLibs.SupportV4
+  implementation AndroidXLibs.MaterialDesign
+  implementation AndroidXLibs.CardView
+  implementation AndroidXLibs.CustomTabs
+  implementation AndroidXLibs.ConstraintLayout
 
-  implementation WidgetLibs.Nachos
   implementation WidgetLibs.FlowLayout
-  implementation WidgetLibs.CircularImageView
   implementation WidgetLibs.AHBottomNavigation
-  implementation WidgetLibs.MaterialChipsInput
-  implementation WidgetLibs.MaterialAboutLibrary
-  implementation WidgetLibs.MaterialDateTimePicker
-  implementation WidgetLibs.MaterialRipple
 
-  implementation project(':mdc-bottom-navigation')
-  implementation project(':mdc-expansion-panel')
+  implementation project(':mdc:bottom-navigation')
+  implementation project(':mdc:expansion-panel')
   api project(':lib-common')
   api project(':lib-common-resource')
 }

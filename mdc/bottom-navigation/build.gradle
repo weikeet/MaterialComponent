@@ -28,16 +28,17 @@ dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation DepLibs.KotlinLib7
 
-  implementation AndroidLibs.AndroidXCoreKtx
+  implementation AndroidXLibs.Core
+  implementation AndroidXLibs.CoreKtx
 
-  implementation AndroidLibs.XAppCompat
-  implementation AndroidLibs.XMaterialDesign
-  implementation AndroidLibs.XCardView
-  implementation AndroidLibs.XSupportV4
-  implementation AndroidLibs.XCustomTabs
-  implementation AndroidLibs.XConstraintLayout
+  implementation AndroidXLibs.AppCompat
+  implementation AndroidXLibs.MaterialDesign
+  implementation AndroidXLibs.CardView
+  implementation AndroidXLibs.SupportV4
+  implementation AndroidXLibs.CustomTabs
+  implementation AndroidXLibs.ConstraintLayout
 
   api project(':lib-common')
   api project(':lib-common-resource')
-  api project(':mdc-common-resource')
+  api project(':mdc:common-resource')
 }
