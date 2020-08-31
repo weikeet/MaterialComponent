@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">mdc-expansion-panel</string>
+    <string name="expansion_panel_app_name">mdc-expansion-panel</string>
 
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie. Fusce quis mauris a enim sollicitudin \10\10Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie. Fusce quis mauris a enim sollicitudin</string>
 </resources>

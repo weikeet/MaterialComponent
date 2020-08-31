@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.weicools.material.component.bottom.navigation">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/bottom_navigation_ic_launcher"
+        android:label="@string/bottom_navigation_app_name"
+        android:roundIcon="@mipmap/bottom_navigation_ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".BottomNavigationBasicActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".BottomNavigationDarkActivity" />
+        <activity android:name=".BottomNavigationIconActivity" />
+        <activity android:name=".BottomNavigationLightActivity" />
+        <activity android:name=".BottomNavigationMapBlueActivity" />
+        <activity android:name=".BottomNavigationPrimaryActivity" />
+        <activity android:name=".BottomNavigationShiftingActivity" />
+    </application>
+</manifest>
