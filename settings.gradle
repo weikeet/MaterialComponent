@@ -1,3 +1,4 @@
+include ':mdc:button'
 include ':app'
 include ':lib-common'
 include ':mdc:alert-dialog'
