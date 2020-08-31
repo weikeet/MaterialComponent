@@ -1,0 +1,25 @@
+apply from: "../../module.build.gradle"
+
+android {
+  defaultConfig {
+    if (isBuildModule.toBoolean()) {
+      applicationId "me.weicools.material.component.button"
+    }
+  }
+  //统一资源前缀，规范资源引用
+  //resourcePrefix "main_"
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+  implementation AndroidXLibs.Core
+  implementation AndroidXLibs.CoreKtx
+  implementation AndroidXLibs.AppCompat
+  implementation AndroidXLibs.MaterialDesign
+  implementation AndroidXLibs.ConstraintLayout
+
+  api project(':lib-common')
+  api project(':lib-common-resource')
+  api project(':mdc:common-resource')
+}
