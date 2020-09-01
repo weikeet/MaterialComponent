@@ -1,9 +1,7 @@
 package me.weicools.material.component.button
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.util.Log
 import androidx.appcompat.widget.AppCompatButton
 
 /**
@@ -13,9 +11,6 @@ import androidx.appcompat.widget.AppCompatButton
 class MaterialButton @JvmOverloads constructor(
   context: Context, attributeSet: AttributeSet? = null, defStyleAttr: Int = android.R.attr.buttonStyle
 ) : AppCompatButton(context, attributeSet, defStyleAttr) {
-  companion object {
-    private const val TAG = "MaterialButton"
-  }
 
   init {
     attributeSet?.let { attrs -> buildBackground(attrs) }
@@ -35,7 +30,7 @@ class MaterialButton @JvmOverloads constructor(
       gradientStartColor = ta.getColor(R.styleable.MaterialButton_mdb_Gradient_startColor, MaterialDrawableHelper.INVALID_COLOR)
       gradientCenterColor = ta.getColor(R.styleable.MaterialButton_mdb_Gradient_centerColor, MaterialDrawableHelper.INVALID_COLOR)
       gradientEndColor = ta.getColor(R.styleable.MaterialButton_mdb_Gradient_endColor, MaterialDrawableHelper.INVALID_COLOR)
-      gradientOrientation = ta.getInt(R.styleable.MaterialButton_mdb_Gradient_orientation, 0)
+      gradientOrientation = ta.getInt(R.styleable.MaterialButton_mdb_Gradient_orientation, MaterialDrawableHelper.TOP_BOTTOM)
 
       cornerRadius = ta.getDimension(R.styleable.MaterialButton_mdb_Corner_radius, MaterialDrawableHelper.DEFAULT_RADIUS)
       cornerTopLeftRadius = ta.getDimension(R.styleable.MaterialButton_mdb_Corner_topLeftRadius, MaterialDrawableHelper.DEFAULT_RADIUS)
@@ -45,17 +40,12 @@ class MaterialButton @JvmOverloads constructor(
 
       strokeColor = ta.getColor(R.styleable.MaterialButton_mdb_Stroke_color, MaterialDrawableHelper.INVALID_COLOR)
       strokeWidth = ta.getDimensionPixelOffset(R.styleable.MaterialButton_mdb_Stroke_width, MaterialDrawableHelper.DEFAULT_STROKE_WIDTH)
-      strokeDashGap = ta.getDimension(R.styleable.MaterialButton_mdb_Stroke_dashGap, 0f)
-      strokeDashWidth = ta.getDimension(R.styleable.MaterialButton_mdb_Stroke_dashWidth, 0f)
+      strokeDashGap = ta.getDimension(R.styleable.MaterialButton_mdb_Stroke_dashGap, MaterialDrawableHelper.DEFAULT_STROKE_DASH)
+      strokeDashWidth = ta.getDimension(R.styleable.MaterialButton_mdb_Stroke_dashWidth, MaterialDrawableHelper.DEFAULT_STROKE_DASH)
     }
 
     background = drawableHelper.buildDrawable(context)
 
     ta.recycle()
-  }
-
-  override fun setBackground(background: Drawable?) {
-    super.setBackground(background)
-    Log.d(TAG, "setBackground: background=${background}")
   }
 }

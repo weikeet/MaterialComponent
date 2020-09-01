@@ -21,12 +21,12 @@ class MaterialDrawableHelper {
     const val INVALID_COLOR = -1
     const val DEFAULT_RADIUS = 0f
     const val DEFAULT_STROKE_WIDTH = 0
+    const val DEFAULT_STROKE_DASH = 0f
 
     const val TOP_BOTTOM = 0
     const val BOTTOM_TOP = 1
     const val LEFT_RIGHT = 2
     const val RIGHT_LEFT = 3
-
     const val TL_BR = 4
     const val TR_BL = 5
     const val BL_TR = 6
@@ -40,7 +40,7 @@ class MaterialDrawableHelper {
   @DrawableRes
   var srcBackground = INVALID_SRC
 
-  var rippleEnable = false
+  var rippleEnable = true
 
   @ColorInt
   var rippleColor = INVALID_COLOR
@@ -69,8 +69,8 @@ class MaterialDrawableHelper {
   @ColorInt
   var strokeColor = INVALID_COLOR
   var strokeWidth = DEFAULT_STROKE_WIDTH
-  var strokeDashGap = 0f
-  var strokeDashWidth = 0f
+  var strokeDashGap = DEFAULT_STROKE_DASH
+  var strokeDashWidth = DEFAULT_STROKE_DASH
 
   fun buildDrawable(context: Context): Drawable? {
     val rippleColors = if (rippleColor == INVALID_COLOR) {
@@ -86,24 +86,10 @@ class MaterialDrawableHelper {
       ) {
         return RippleDrawable(rippleColors, srcDrawable, null)
       }
-      return srcDrawable;
+      return srcDrawable
     }
 
     val contentDrawable = GradientDrawable()
-
-    //Set corners
-    if (cornerRadius > DEFAULT_RADIUS) {
-      contentDrawable.cornerRadius = cornerRadius
-    } else {
-      if (cornerTopLeftRadius > 0 || cornerTopRightRadius > 0
-        || cornerBottomLeftRadius > 0 || cornerBottomRightRadius > 0
-      ) {
-        contentDrawable.cornerRadii = floatArrayOf(
-          cornerTopLeftRadius, cornerTopLeftRadius, cornerTopRightRadius, cornerTopRightRadius,
-          cornerBottomRightRadius, cornerBottomRightRadius, cornerBottomLeftRadius, cornerBottomLeftRadius
-        )
-      }
-    }
 
     //Set color
     if (solidColor != INVALID_COLOR) {
@@ -112,13 +98,13 @@ class MaterialDrawableHelper {
 
       if (gradientStartColor != INVALID_COLOR && gradientEndColor != INVALID_COLOR) {
         contentDrawable.orientation = when (gradientOrientation) {
-          1 -> GradientDrawable.Orientation.BOTTOM_TOP
-          2 -> GradientDrawable.Orientation.LEFT_RIGHT
-          3 -> GradientDrawable.Orientation.RIGHT_LEFT
-          4 -> GradientDrawable.Orientation.TL_BR
-          5 -> GradientDrawable.Orientation.TR_BL
-          6 -> GradientDrawable.Orientation.BL_TR
-          7 -> GradientDrawable.Orientation.BR_TL
+          BOTTOM_TOP -> GradientDrawable.Orientation.BOTTOM_TOP
+          LEFT_RIGHT -> GradientDrawable.Orientation.LEFT_RIGHT
+          RIGHT_LEFT -> GradientDrawable.Orientation.RIGHT_LEFT
+          TL_BR -> GradientDrawable.Orientation.TL_BR
+          TR_BL -> GradientDrawable.Orientation.TR_BL
+          BL_TR -> GradientDrawable.Orientation.BL_TR
+          BR_TL -> GradientDrawable.Orientation.BR_TL
           else -> GradientDrawable.Orientation.TOP_BOTTOM
         }
 
@@ -128,6 +114,19 @@ class MaterialDrawableHelper {
           intArrayOf(gradientStartColor, gradientEndColor)
         }
       }
+    }
+
+    //Set corners
+    if (cornerRadius > DEFAULT_RADIUS) {
+      contentDrawable.cornerRadius = cornerRadius
+
+    } else if (cornerTopLeftRadius > DEFAULT_RADIUS || cornerTopRightRadius > DEFAULT_RADIUS
+      || cornerBottomLeftRadius > DEFAULT_RADIUS || cornerBottomRightRadius > DEFAULT_RADIUS
+    ) {
+      contentDrawable.cornerRadii = floatArrayOf(
+        cornerTopLeftRadius, cornerTopLeftRadius, cornerTopRightRadius, cornerTopRightRadius,
+        cornerBottomRightRadius, cornerBottomRightRadius, cornerBottomLeftRadius, cornerBottomLeftRadius
+      )
     }
 
     //Set stroke

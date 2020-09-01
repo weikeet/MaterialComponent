@@ -7,59 +7,95 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/compatButton"
+        style="@style/MDButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <me.weicools.material.component.button.MaterialButton
-        android:id="@+id/actionButton"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:clickable="true"
+        android:id="@+id/actionButton1"
+        style="@style/MDButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:mdb_Corners_radius="4dp"
+        app:layout_constraintTop_toBottomOf="@id/compatButton"
         app:mdb_Solid_color="@color/app_green" />
 
     <me.weicools.material.component.button.MaterialButton
-        android:id="@+id/actionButton1"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/actionButton"
-        app:mdb_Background="@drawable/button_cus"
-        app:mdb_Corners_radius="4dp"
-        app:mdb_Gradient_endColor="@color/app_blue_dark"
-        app:mdb_Gradient_orientation="LEFT_RIGHT"
-        app:mdb_Gradient_startColor="@color/app_blue"
-        app:mdb_Ripple_color="@color/ripple_button_light" />
-
-    <me.weicools.material.component.button.ac.MaterialButton
         android:id="@+id/actionButton2"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:clickable="true"
+        style="@style/MDButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/actionButton1" />
+        app:layout_constraintTop_toBottomOf="@id/actionButton1"
+        app:mdb_Corner_radius="4dp"
+        app:mdb_Solid_color="@color/app_green" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_margin="8dp"
-        android:clickable="true"
+    <me.weicools.material.component.button.MaterialButton
+        android:id="@+id/actionButton3"
+        style="@style/MDButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/actionButton2" />
+        app:layout_constraintTop_toBottomOf="@id/actionButton2"
+        app:mdb_Corner_radius="4dp"
+        app:mdb_Gradient_endColor="@color/app_green_dark"
+        app:mdb_Gradient_startColor="@color/app_green" />
+
+    <me.weicools.material.component.button.MaterialButton
+        android:id="@+id/actionButton4"
+        style="@style/MDButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionButton3"
+        app:mdb_Corner_radius="4dp"
+        app:mdb_Gradient_centerColor="@color/app_blue_dark"
+        app:mdb_Gradient_endColor="@color/app_green_dark"
+        app:mdb_Gradient_orientation="LEFT_RIGHT"
+        app:mdb_Gradient_startColor="@color/app_green" />
+
+    <me.weicools.material.component.button.MaterialButton
+        android:id="@+id/actionButton5"
+        style="@style/MDButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionButton4"
+        app:mdb_Corner_bottomRightRadius="8dp"
+        app:mdb_Corner_topLeftRadius="4dp"
+        app:mdb_Gradient_centerColor="@color/app_blue_dark"
+        app:mdb_Gradient_endColor="@color/app_green_dark"
+        app:mdb_Gradient_orientation="LEFT_RIGHT"
+        app:mdb_Gradient_startColor="@color/app_green" />
+
+    <me.weicools.material.component.button.MaterialButton
+        android:id="@+id/actionButton6"
+        style="@style/MDButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionButton5"
+        app:mdb_Corner_bottomRightRadius="8dp"
+        app:mdb_Corner_topLeftRadius="4dp"
+        app:mdb_Gradient_centerColor="@color/app_blue_dark"
+        app:mdb_Gradient_endColor="@color/app_green_dark"
+        app:mdb_Gradient_orientation="LEFT_RIGHT"
+        app:mdb_Gradient_startColor="@color/app_green"
+        app:mdb_Stroke_color="@color/app_red"
+        app:mdb_Stroke_width="4dp" />
+
+    <me.weicools.material.component.button.MaterialButton
+        android:id="@+id/actionButton7"
+        style="@style/MDButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionButton6"
+        app:mdb_Corner_bottomRightRadius="8dp"
+        app:mdb_Corner_topLeftRadius="4dp"
+        app:mdb_Gradient_centerColor="@color/app_blue_dark"
+        app:mdb_Gradient_endColor="@color/app_green_dark"
+        app:mdb_Gradient_orientation="LEFT_RIGHT"
+        app:mdb_Gradient_startColor="@color/app_green"
+        app:mdb_Stroke_color="@color/app_red"
+        app:mdb_Stroke_dashGap="4dp"
+        app:mdb_Stroke_dashWidth="4dp"
+        app:mdb_Stroke_width="4dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
