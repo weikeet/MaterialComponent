@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="ripple_button">#42ffffff</color>
+    <color name="ripple_button_light">#24000000</color>
 </resources>

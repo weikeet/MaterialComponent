@@ -16,4 +16,50 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <me.weicools.material.component.button.MaterialButton
+        android:id="@+id/actionButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mdb_Corners_radius="4dp"
+        app:mdb_Solid_color="@color/app_green" />
+
+    <me.weicools.material.component.button.MaterialButton
+        android:id="@+id/actionButton1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionButton"
+        app:mdb_Background="@drawable/button_cus"
+        app:mdb_Corners_radius="4dp"
+        app:mdb_Gradient_endColor="@color/app_blue_dark"
+        app:mdb_Gradient_orientation="LEFT_RIGHT"
+        app:mdb_Gradient_startColor="@color/app_blue"
+        app:mdb_Ripple_color="@color/ripple_button_light" />
+
+    <me.weicools.material.component.button.ac.MaterialButton
+        android:id="@+id/actionButton2"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionButton1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/actionButton2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
