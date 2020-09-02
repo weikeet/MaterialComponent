@@ -10,6 +10,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/compatButton"
         style="@style/MDButton"
+        android:background="@drawable/bg_action"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

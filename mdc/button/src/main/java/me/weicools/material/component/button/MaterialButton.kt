@@ -8,12 +8,25 @@ import androidx.appcompat.widget.AppCompatButton
  * @author weicools
  * @date 2020.09.01
  */
-class MaterialButton @JvmOverloads constructor(
-  context: Context, attributeSet: AttributeSet? = null, defStyleAttr: Int = android.R.attr.buttonStyle
-) : AppCompatButton(context, attributeSet, defStyleAttr) {
+class MaterialButton : AppCompatButton {
 
-  init {
-    attributeSet?.let { attrs -> buildBackground(attrs) }
+  constructor(context: Context) : super(context)
+
+  constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
+    initAttrs(attrs)
+  }
+
+  constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+    initAttrs(attrs)
+  }
+
+  private fun initAttrs(attributeSet: AttributeSet?) {
+    attributeSet?.let { attrs ->
+      try {
+        buildBackground(attrs)
+      } catch (ignore: Exception) {
+      }
+    }
   }
 
   private fun buildBackground(attrs: AttributeSet) {
