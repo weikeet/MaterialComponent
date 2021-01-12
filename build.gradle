@@ -2,7 +2,7 @@ apply from: './buildSrc/checkVersions.gradle'
 
 buildscript {
   ext {
-    kotlin_version = '1.4.0'
+    kotlin_version = '1.4.21'
   }
 
   repositories {
