@@ -4,15 +4,14 @@ if (isBuildModule.toBoolean()) {
   apply plugin: 'com.android.library'
 }
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-  compileSdkVersion Versions.compileSdkVersion
-  buildToolsVersion Versions.buildToolsVersion
+  compileSdkVersion 30
+  buildToolsVersion "30.0.3"
   defaultConfig {
-    minSdkVersion Versions.minSdkVersion
-    targetSdkVersion Versions.targetSdkVersion
+    minSdkVersion 21
+    targetSdkVersion 30
 
     versionCode 1
     versionName "1.0"

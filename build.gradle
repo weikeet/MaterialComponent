@@ -2,16 +2,16 @@ apply from: './buildSrc/checkVersions.gradle'
 
 buildscript {
   ext {
-    kotlin_version = '1.4.21'
+    kotlin_version = '1.5.10'
   }
 
   repositories {
     google()
-    jcenter()
+    maven { url 'https://maven.aliyun.com/repository/public/' }
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:4.0.1"
+    classpath "com.android.tools.build:gradle:4.2.1"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     classpath "com.github.ben-manes:gradle-versions-plugin:0.29.0"
   }
@@ -20,8 +20,8 @@ buildscript {
 allprojects {
   repositories {
     google()
-    jcenter()
     maven { url 'https://jitpack.io' }
+    maven { url 'https://maven.aliyun.com/repository/public/' }
   }
 }
 
