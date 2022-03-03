@@ -1,14 +1,15 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+plugins {
+  id 'com.android.application'
+  id 'kotlin-android'
+  id 'kotlin-kapt'
+}
 
 android {
-  compileSdkVersion 30
-  buildToolsVersion "30.0.3"
+  compileSdkVersion 31
   defaultConfig {
     applicationId "me.weicools.material.component"
     minSdkVersion 21
-    targetSdkVersion 30
+    targetSdkVersion 31
     versionCode 1
     versionName "1.0"
 
@@ -25,6 +26,10 @@ android {
         arguments = [moduleName: project.getName()]
       }
     }
+  }
+
+  buildFeatures {
+    viewBinding = true
   }
 
   buildTypes {
@@ -50,20 +55,26 @@ android {
 }
 
 dependencies {
-  implementation DepLibs.KotlinLib
-
+  implementation AndroidXLibs.CoreKtx
   implementation AndroidXLibs.AppCompat
-  implementation AndroidXLibs.SupportV4
   implementation AndroidXLibs.MaterialDesign
-  implementation AndroidXLibs.CardView
-  implementation AndroidXLibs.CustomTabs
   implementation AndroidXLibs.ConstraintLayout
 
   implementation WidgetLibs.FlowLayout
   implementation WidgetLibs.AHBottomNavigation
 
-  implementation project(':mdc:bottom-navigation')
-  implementation project(':mdc:expansion-panel')
-  api project(':lib-common')
-  api project(':lib-common-resource')
+  implementation 'com.weicools:core:1.1.0'
+  implementation 'com.weicools:core-ktx:1.1.0'
+  implementation 'com.weicools:mmkv-ktx:1.1.0'
+  implementation 'com.weicools:view-binding:1.1.0'
+  implementation 'com.weicools:fluent-layout:1.1.1'
+  implementation 'com.weicools:task-scheduler:1.1.0'
+  implementation 'com.weicools:utils:1.1.0'
+
+  implementation project(':lib-common')
+  implementation project(':lib-common-resource')
+
+  // implementation project(':mdc:bottom-navigation')
+  // implementation project(':mdc:expansion-panel')
+
 }

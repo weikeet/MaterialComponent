@@ -33,3 +33,5 @@ build/
 .externalNativeBuild
 /.project
 /.settings/
+
+buildSrc/
