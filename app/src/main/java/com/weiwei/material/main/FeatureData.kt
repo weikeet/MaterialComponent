@@ -6,9 +6,9 @@ import androidx.annotation.IntDef
 import androidx.annotation.StringRes
 
 abstract class FeatureData constructor(
-    @param:StringRes @field:StringRes @get:StringRes val titleResId: Int,
-    @param:DrawableRes @field:DrawableRes @get:DrawableRes val drawableResId: Int,
-    @param:Status @field:Status val status: Int = STATUS_READY
+  @StringRes val titleResId: Int,
+  @DrawableRes val drawableResId: Int,
+  @Status val status: Int = STATUS_READY
 ) {
 
   @IntDef(STATUS_READY, STATUS_WIP)
