@@ -1,4 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <string name="AGREE">AGREE</string>
     <string name="BACK">BACK</string>
     <string name="CANCEL" tools:ignore="ButtonCase">CANCEL</string>
@@ -24,4 +25,5 @@
     <string name="TYPE_SEARCH">SEARCH</string>
     <string name="UPDATE">UPDATE</string>
     <string name="YES">YES</string>
+
 </resources>

@@ -1,6 +1,5 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -11,7 +10,7 @@
         <item name="textColorSecondary">@color/font_color</item>
         <item name="textColors">@color/colorPrimaryDark</item>
 
-        <item name="navActive">@color/blue_A200</item>
+        <item name="navActive">@color/mdc_blue_200</item>
         <item name="navInActive">@color/font_color</item>
     </style>
 

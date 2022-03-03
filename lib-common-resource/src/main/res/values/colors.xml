@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="酷安绿_chateau_green">#44AF57</color>
     <color name="姨妈红_valencia">#DE443A</color>
     <color name="哔哩粉_light_crimson">#FE7198</color>
@@ -83,4 +84,5 @@
 
     <color name="blue_grey_primary">#607D8B</color>
     <color name="blue_grey_primary_dark">#455A64</color>
+
 </resources>
