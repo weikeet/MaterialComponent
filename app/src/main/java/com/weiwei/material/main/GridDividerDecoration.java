@@ -1,4 +1,4 @@
-package me.weicools.material.component.main;
+package com.weiwei.material.main;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

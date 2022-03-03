@@ -1,4 +1,4 @@
-package me.weicools.material.component.main
+package com.weiwei.material.main
 
 import android.app.Activity
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import me.weicools.material.component.R
-import me.weicools.material.component.main.FeatureData.Companion.STATUS_WIP
+import com.weiwei.material.R
+import com.weiwei.material.main.FeatureData.Companion.STATUS_WIP
 
 /**
  * @author Weicools Create on 2019.08.10

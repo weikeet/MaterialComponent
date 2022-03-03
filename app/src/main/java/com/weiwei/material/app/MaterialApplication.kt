@@ -1,4 +1,4 @@
-package me.weicools.material.component
+package com.weiwei.material.app
 
 import android.app.Application
 

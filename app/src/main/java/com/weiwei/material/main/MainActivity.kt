@@ -1,4 +1,4 @@
-package me.weicools.material.component.main
+package com.weiwei.material.main
 
 import android.os.Bundle
 import android.view.View
@@ -8,8 +8,8 @@ import androidx.core.math.MathUtils
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
 import com.weiwei.view.binding.viewBinding
-import me.weicools.material.component.R
-import me.weicools.material.component.databinding.ActivityMainBinding
+import com.weiwei.material.R
+import com.weiwei.material.databinding.ActivityMainBinding
 import kotlin.math.abs
 
 /**

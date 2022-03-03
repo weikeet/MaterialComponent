@@ -1,4 +1,4 @@
-package me.weicools.material.component.main
+package com.weiwei.material.main
 
 import android.app.Activity
 import androidx.annotation.DrawableRes

@@ -1,4 +1,4 @@
-package me.weicools.material.component.main
+package com.weiwei.material.main
 
 /**
  * @author Weicools Create on 2019.08.10

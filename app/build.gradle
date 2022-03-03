@@ -7,7 +7,7 @@ plugins {
 android {
   compileSdkVersion 31
   defaultConfig {
-    applicationId "me.weicools.material.component"
+    applicationId "com.weiwei.material"
     minSdkVersion 21
     targetSdkVersion 31
     versionCode 1
